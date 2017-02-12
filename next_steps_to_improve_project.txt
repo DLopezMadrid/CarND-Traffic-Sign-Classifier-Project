@@ -1,0 +1,28 @@
+batch normalization:
+http://r2rt.com/implementing-batch-normalization-in-tensorflow.html
+https://cs231n.github.io/neural-networks-2/
+
+different network architecture:
+https://arxiv.org/pdf/1606.02228.pdf
+
+faster RCNN:
+https://carnd-forums.udacity.com/cq/viewquestion.action?id=32720316&questionTitle=traffic-sign-detection-and-classification-using-faster-rcnn
+
+From project review:
+A good idea here is to normalize the image data into very small range such as [-0.5, 0.5] to prevent floating point errors from skewing your results and to make it have roughly zero mean and equal variance, making it easier for the optimizer to go and find a solution.
+Another idea here is Contrast Limited Adaptative Histogram Equalization, or CLAHE, which can give even better results. [http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html]
+Have your tried visualizing this architecture using TensorBoard? [https://www.tensorflow.org/how_tos/graph_viz/]
+Instead of a fixed number of epochs, an alternative is implementing an early termination, as overtraining can lead to overfitting.
+You can do this easily by defining a max number of epochs, and on each epoch decide to continue or terminate based on the previous values for validation accuracy and/or loss. For instance, if there's no improvement for the last n epochs, stop training.
+Also, if you want to know more about optimizers, check this article for a nice description and comparison of different algorithms. [http://sebastianruder.com/optimizing-gradient-descent/index.html#adam]
+
+References:
+https://github.com/diyjac/SDC-P2/blob/master/Traffic_Signs_Recognition.ipynb
+https://github.com/vxy10/p2-TrafficSigns/blob/master/Traffic_signs_Col_val_final2.ipynb
+https://github.com/autojazari/Udacity-Self-Driving-Car-Projects/blob/master/P2-Traffic-Sign-Detection/Solution-2FC-Final.ipynb
+https://github.com/autojazari/Udacity-Self-Driving-Car-Projects/blob/master/P2-Traffic-Sign-Detection/utils2layers.py
+https://github.com/mvirgo/Traffic-Sign-Classifier/blob/master/Traffic_Sign_Classifier.ipynb
+https://github.com/upul/traffic-signs/blob/master/Traffic_Signs_Recognition.ipynb
+https://github.com/MWransky/traffic-signs/blob/MWransky-submission/Traffic_Signs_Recognition.ipynb
+https://github.com/jeremy-shannon/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb
+https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb
