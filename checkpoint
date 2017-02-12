@@ -1,0 +1,3 @@
+model_checkpoint_path: "lenetplus_gs_bal_final"
+all_model_checkpoint_paths: "lenet_.ckpt"
+all_model_checkpoint_paths: "lenetplus_gs_bal_final"
